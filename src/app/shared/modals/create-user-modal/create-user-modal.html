@@ -1,0 +1,57 @@
+
+
+<h2 mat-dialog-title>{{ data.title || "Crear usuario" }}</h2>
+
+<div class="modal-content">
+  <form [formGroup]="form">
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error *ngIf="form.controls['name'].touched && form.controls['name'].invalid">
+        Obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+      <mat-error *ngIf="form.controls['email'].touched && form.controls['email'].invalid">
+        Email inválido
+      </mat-error>
+    </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full">
+      <mat-label>Telefono</mat-label>
+      <input matInput type="phone" formControlName="phone" />
+      <mat-error *ngIf="form.controls['phone'].touched && form.controls['phone'].invalid">
+        phone inválido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Rol</mat-label>
+      <mat-select formControlName="role">
+        <mat-option value="ADMIN">Admin</mat-option>
+        <mat-option value="CUSTOMER">Usuario</mat-option>
+        <mat-option value="EMPLOYEE">Empleado</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" formControlName="password" />
+      <mat-error *ngIf="form.controls['password'].invalid && form.controls['password'].touched">
+        Mínimo 6 caracteres
+      </mat-error>
+    </mat-form-field>
+
+  </form>
+</div>
+
+<div mat-dialog-actions align="center">
+  <button mat-stroked-button color="warn" (click)="close()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="save()">Crear</button>
+</div>
+

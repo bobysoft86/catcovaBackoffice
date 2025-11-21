@@ -1,0 +1,80 @@
+.table-wrapper {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(15, 23, 42, 0.06);
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+
+  h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--catcova-text-main);
+  }
+
+  .table-header-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.table-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  .search-field {
+    min-width: 260px;
+    max-width: 360px;
+  }
+}
+
+/* Estilos base para mat-table */
+
+.mat-mdc-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.mat-mdc-header-row {
+  background: #f9fafb;
+}
+
+.mat-mdc-header-cell {
+  font-weight: 600;
+  color: var(--catcova-text-main);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.mat-mdc-cell {
+  color: var(--catcova-text-main);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Columna de acciones alineada a la derecha */
+
+.table-actions-header {
+  text-align: center !important;
+}
+
+.table-actions {
+
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* Paginador debajo de la tabla */
+
+.mat-mdc-paginator {
+  margin-top: 0.5rem;
+  background: transparent;
+}

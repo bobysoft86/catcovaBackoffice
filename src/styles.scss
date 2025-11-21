@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/catcova-theme' as *;
+@use 'styles/tableStyles' as *;
+@use 'styles/buttonsStyles' as *;
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Roboto, sans-serif;
+  background-color: var(--catcova-bg);
+  color: var(--catcova-text-main);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: var(--catcova-sidebar-bg);
+  padding: 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  padding: 2rem 3rem;
+}

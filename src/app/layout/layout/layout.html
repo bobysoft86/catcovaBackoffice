@@ -1,0 +1,90 @@
+<div class="app-shell">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-icon">
+      <img src="assets/logos/logo.png" />
+
+      </div>
+        <span class="logo-text">catCova</span>
+      </div>
+
+      <!-- Menú -->
+      <nav class="nav">
+        <a
+          class="nav-item"
+          routerLink="/dashboard"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+
+        <a class="nav-item" routerLink="/articles" routerLinkActive="active">
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Juegos</span>
+        </a>
+
+        <a class="nav-item" routerLink="/users" routerLinkActive="active">
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Usuarios</span>
+        </a>
+
+        <a class="nav-item" routerLink="/rentals" routerLinkActive="active">
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Préstamos</span>
+        </a>
+
+        <a class="nav-item" routerLink="/reservas" routerLinkActive="active">
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Reservas</span>
+        </a>
+
+        <a class="nav-item" routerLink="/incidencias" routerLinkActive="active">
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Incidencias</span>
+        </a>
+
+        <a class="nav-item" routerLink="/configuracion" routerLinkActive="active">
+          <span class="nav-bullet"></span>
+          <span class="nav-label">Configuración</span>
+        </a>
+      </nav>
+      <div>
+          <button mat-raised-button color="primary" (click)="logout()">Cerrar sesión</button>
+        </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          placeholder="Buscar juego, usuario, reserva..."
+          class="search-input"
+        />
+      </div>
+
+      <div>
+        avatar
+      </div>
+
+      <div class="topbar-right">
+        <!-- Aquí luego podemos meter usuario, avatar, idioma, etc. -->
+      </div>
+    </header>
+
+
+    <!-- Contenido -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

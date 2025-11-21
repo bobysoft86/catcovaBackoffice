@@ -1,0 +1,25 @@
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  margin: .5rem;
+
+}
+
+.full {
+  width: 100%;
+}
+
+.two-columns {
+  display: flex;
+  gap: 1rem;
+
+  .half {
+    width: 100%;
+  }
+}
+
+textarea {
+  resize: vertical;
+}

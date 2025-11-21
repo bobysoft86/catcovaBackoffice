@@ -1,0 +1,31 @@
+@use '@angular/material' as mat;
+
+// Recomendado por Material
+@include mat.core();
+
+// Paletas M2 (fíjate en el prefijo m2-)
+$catcova-primary: mat.m2-define-palette(mat.$m2-orange-palette, 500, 300, 700);
+$catcova-accent:  mat.m2-define-palette(mat.$m2-amber-palette, 500, 300, 700);
+$catcova-warn:    mat.m2-define-palette(mat.$m2-red-palette);
+
+// Tema claro M2
+$catcova-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $catcova-primary,
+    accent: $catcova-accent,
+    warn: $catcova-warn,
+  ),
+));
+
+// Aplica el tema a todos los componentes Material
+@include mat.all-component-themes($catcova-theme);
+
+// Colores globales de la app
+:root {
+  --catcova-bg: #faf6ef;
+  --catcova-sidebar-bg: #f4ede3;
+  --catcova-surface: #ffffff;
+  --catcova-primary: #f59e0b; // naranja principal
+  --catcova-text-main: #111827;
+  --catcova-text-muted: #6b7280;
+}

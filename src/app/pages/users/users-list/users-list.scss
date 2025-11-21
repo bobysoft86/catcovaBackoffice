@@ -1,0 +1,22 @@
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--catcova-text-main);
+  }
+}
+
+.filters {
+  display: flex;
+  margin-bottom: 1.4rem;
+
+  .search-field {
+    width: 320px;
+  }
+}
+
