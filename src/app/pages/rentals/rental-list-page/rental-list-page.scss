@@ -1,0 +1,22 @@
+.status {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.status.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.returned {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.status.late {
+  background: #fee2e2;
+  color: #991b1b;
+}
