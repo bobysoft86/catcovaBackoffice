@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet, Router } from '@angular/rou
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../core/services/auth.service';
 import { MatAnchor } from "@angular/material/button";
+import { MatIcon } from "@angular/material/icon";
 
 
 @Component({
@@ -13,17 +14,21 @@ import { MatAnchor } from "@angular/material/button";
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    MatAnchor
+    MatAnchor,
+    MatIcon
 ],
     templateUrl: './layout.html',
   styleUrl: './layout.scss',
 })
 export class Layout {
-
+  user: any;
     constructor(
     private auth: AuthService,
     private router: Router
-  ) {}
+  ) {
+    this.user = this.auth.getUser()
+    console.log('Usuario en layout:', this.user);
+  }
   
   logout() {
     this.auth.logout();

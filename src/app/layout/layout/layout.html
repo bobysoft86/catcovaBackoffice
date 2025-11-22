@@ -1,13 +1,14 @@
 <div class="app-shell">
-  <!-- SIDEBAR -->
+<!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-inner">
       <!-- Logo -->
       <div class="logo">
         <div class="logo-icon">
-      <img src="assets/logos/logo.png" />
-
+      <!-- <img src="assets/logos/logo.png" /> -->
+        <mat-icon>sports_esports</mat-icon>
       </div>
+
         <span class="logo-text">catCova</span>
       </div>
 
@@ -71,13 +72,14 @@
           class="search-input"
         />
       </div>
-
-      <div>
-        avatar
-      </div>
-
+      
       <div class="topbar-right">
         <!-- Aquí luego podemos meter usuario, avatar, idioma, etc. -->
+        <div class="avatar-container">
+          <mat-icon class="user-avatar">person</mat-icon>
+          <div>{{user?.user.name}}</div>
+          <mat-icon (click)="logout()" class="logout-icon" aria-hidden="false" aria-label="Logout icon">logout</mat-icon>
+        </div>
       </div>
     </header>
 

@@ -41,14 +41,10 @@
   align-items: center;
   justify-content: center;
   background: var(--catcova-primary);
+  padding: 3px;
   color: #fff;
   font-size: 0.9rem;
   box-shadow: 0 6px 16px rgba(249, 115, 22, 0.3);
-
-  img{
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .logo-text {
@@ -209,5 +205,20 @@
 
   .content {
     padding-inline: 1rem;
+  }
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--catcova-text-main);
+  font-size: 0.9rem;
+  .user-avatar {
+    background: var(--catcova-primary);
+    color: #fff;
+    border-radius: 30%;
+    padding: 4px;
+    font-size: 1.5rem;
   }
 }
