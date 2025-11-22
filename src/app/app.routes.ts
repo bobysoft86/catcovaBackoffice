@@ -34,6 +34,24 @@ export const routes: Routes = [
           import('./pages/rentals/rental-list-page/rental-list-page')
             .then(m => m.RentalListPage)
       },
+         {
+        path: 'bookings',
+        loadComponent: () =>
+          import('./pages/bookings/bookings-list-page/bookings-list-page')
+            .then(m => m.BookingsListPage)
+      },
+            {
+        path: 'incidence',
+        loadComponent: () =>
+          import('./pages/incidence/incidence-list/incidence-list')
+            .then(m => m.IncidenceList)
+      },
+            {
+        path: 'configuration',
+        loadComponent: () =>
+          import('./pages/configuration/configuration/configuration')
+            .then(m => m.Configuration)
+      },
 
     ]
   }, {

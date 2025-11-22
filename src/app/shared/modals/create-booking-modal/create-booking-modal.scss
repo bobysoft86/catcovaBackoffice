@@ -1,0 +1,50 @@
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  margin: .5rem;
+
+}
+
+.full {
+  width: 100%;
+}
+
+.two-columns {
+  display: flex;
+  gap: 1rem;
+
+  .half {
+    width: 100%;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Contenedor del panel */
+.mat-mdc-datepicker-content {
+  border-radius: 16px !important;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22) !important;
+}
+
+/* Cabecera */
+.mat-calendar-header {
+  padding: 0.6rem 1rem 0.4rem 1rem !important;
+}
+
+/* Días */
+.mat-calendar-body-cell-content {
+  border-radius: 999px !important;
+}
+
+.mat-calendar-body-selected {
+  background-color: var(--catcova-primary, #f97316) !important;
+  color: #fff !important;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border-color: var(--catcova-primary, #f97316) !important;
+}

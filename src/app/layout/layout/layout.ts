@@ -27,7 +27,6 @@ export class Layout {
     private router: Router
   ) {
     this.user = this.auth.getUser()
-    console.log('Usuario en layout:', this.user);
   }
   
   logout() {

@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>Crear booking</h2>
+
+<div class="modal-content">
+  <form [formGroup]="form">
+    <!-- Usuario -->
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Usuario</mat-label>
+      <mat-select formControlName="userId">
+        <mat-option *ngIf="loadingUsers" disabled>
+          Cargando usuarios...
+        </mat-option>
+        <mat-option *ngFor="let u of users" [value]="u.id">
+          {{ u.name }} ({{ u.email }})
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls['userId'].touched && form.controls['userId'].invalid">
+        Obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Juego / Artículo -->
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Juego</mat-label>
+      <mat-select formControlName="articleId">
+        <mat-option *ngIf="loadingArticles" disabled>
+          Cargando juegos...
+        </mat-option>
+        <mat-option *ngFor="let a of articles" [value]="a.id">
+          {{ a.title }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls['articleId'].touched && form.controls['articleId'].invalid">
+        Obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Fecha de recogida -->
+    <mat-form-field appearance="outline" class="full" color="primary">
+  <mat-label>Fecha de recogida</mat-label>
+  <input
+    matInput
+    [matDatepicker]="picker"
+    formControlName="rentDate"
+    placeholder="Selecciona una fecha"
+  />
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+
+  <mat-error *ngIf="form.controls['rentDate'].touched && form.controls['rentDate'].invalid">
+    Obligatorio
+  </mat-error>
+</mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions align="center">
+  <button mat-stroked-button color="warn" (click)="close()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="save()">Crear booking</button>
+</div>
